@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgtr</title>
+
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+
+    <script src="../public/bankbalance.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome To Your Budgtr</h1>
+        <a class="button button-primary" href="/new">NEW ITEM</a>
+        <br>
+     
+        <h5>
+            <% if(bank <= 0) {%>
+                <style>
+                    #displayBank{
+                        color: red;
+                    }
+                </style>
+            <% } else if (bank > 0 && bank <= 1000) {%>
+                <style>
+                    #displayBank{
+                        color: blue;
+                    }
+                </style>
+            <%} else {%>
+                <style>
+                    #displayBank{
+                        color: rgb(31, 255, 31);
+                    }
+                </style>
+            <%}%>
+            Your bank account balance: <span id="displayBank"><%='$'+ bank%></span>
+        </h5>
+
+        <table class="u-full-width">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Income/Expense</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% for(let i=0; i<budgetTable.length; i++) { %>
+                    <tr>
+                        <td><%=budgetTable[i].date %></td>
+                        <td><a href="/ledger/<%=i%>"><%=budgetTable[i].name %></a></td>
+                        <td><%=budgetTable[i].amount %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+          </table>
+    </div>
+    
+</body>
+</html>

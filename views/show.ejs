@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgtr:Details</title>
+
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+</head>
+<body>
+    <div class="container">
+        <h1><%=displayEachBudget.name%></h1>
+
+        <a class="button button-primary" href="/ledger">BACK</a><br><br><br>
+    
+        <strong>Date</strong>
+        <BLOCKQUOTE><%=displayEachBudget.date%></BLOCKQUOTE>
+        <strong>Name</strong>
+        <BLOCKQUOTE><%=displayEachBudget.name%></BLOCKQUOTE>
+        <strong>From</strong>
+        <BLOCKQUOTE><%=displayEachBudget.from%></BLOCKQUOTE>
+        <strong>Amount</strong>
+        <BLOCKQUOTE><%=displayEachBudget.amount%></BLOCKQUOTE>
+        <strong>Tags</strong>
+        <BLOCKQUOTE><%=displayEachBudget.tags%></BLOCKQUOTE>
+
+    </div>
+    
+</body>
+</html>

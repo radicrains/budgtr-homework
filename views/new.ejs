@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgtr: New</title>
+
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Add a new item</h1>
+  </div>
+
+  <form action="/ledger" method="POST">
+    <div class="row">
+      <div class="six columns">
+        <label for="date">Date</label>
+        <input class="u-full-width" type="text" name="date" placeholder="March 5" id="date">
+      </div>
+      <div class="six columns">
+        <label for="name">Desription</label>
+        <input class="u-full-width" type="text" name="name" placeholder="Asprin" id="name">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="six columns">
+        <label for="from">From</label>
+        <input class="u-full-width" type="text" name="from" placeholder="Guardian" id="from">
+      </div>
+      <div class="six columns">
+        <label for="amount">Amount</label>
+        <input class="u-full-width" type="text" name="amount" placeholder="6" id="amount">
+      </div>
+      <input class="button button-primary" type="submit" value="Create New Item">
+    </div>
+  </form>
+    
+</body>
+</html>
